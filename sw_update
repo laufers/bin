@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+clear
+
 echo 'Updating brew...'
 brew update 
 brew upgrade 
