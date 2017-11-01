@@ -1,0 +1,82 @@
+#!/bin/csh
+##########################################################################
+# Program:    menu
+# Purpose:    script for presenting menu options for a user
+# Version:    0.0.1
+# Created:    14 MAR 2001
+#
+# Author:     Mark Laufersweiler
+# Email:      laufers@ou.edu
+#
+# Modified:   
+#			
+##########################################################################
+
+
+menu:
+clear
+echo ""
+echo ""
+echo "  Enter number at the prompt to execute"
+echo ""
+echo " 1   Finger rossby"
+echo ""
+echo " 2   Current Norman mesonet Meteogram"
+echo ""
+echo " 3   Current OK station map"
+echo ""
+echo " q   Exit"
+echo ""
+echo ""
+echo ""
+echo -n "==> ";set  input = $<
+
+switch ($input)
+
+case 1:
+	clear
+	finger @rossby
+	echo ""
+	echo ""
+	echo " Hit enter to continue"
+	echo ""
+	set  input = $<
+	goto menu
+	breaksw
+	
+case 2:
+	clear
+	echo ""	
+	echo "running Norman OCS Mesonet meteogram"
+	echo ""	
+	/home/laufers/gem/meso/norm
+	goto menu
+	breaksw
+
+case 3:
+	clear
+	echo ""	
+	echo "running OK station plot"
+	echo ""	      
+	/home/laufers/gem/ok
+	goto menu
+	breaksw
+
+case q: 
+	clear
+	echo ""
+	echo "thank you and lets play again"
+	echo ""
+	exit
+	breaksw
+	
+default:
+	clear
+	echo ""
+	echo " ERROR Number: ID10T"
+	echo ""
+	sleep 3
+	
+endsw	
+
+goto menu

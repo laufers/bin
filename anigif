@@ -1,0 +1,21 @@
+#!/bin/csh
+##########################################################################
+# Program:    test script to test the animated gif 
+# Purpose:    test script to test the animated gif 
+# Version:    0.0.1
+# Created:    1-Nov-2000
+#
+# Author:     Mark Laufersweiler
+# Email:      laufers@ou.edu
+#
+# Modified:   
+#			
+##########################################################################
+whirlgif -globmap -minimize -loop 0 -o sat.gif \
+-time 80 sat01.gif \
+-time 20 sat02.gif sat03.gif sat04.gif sat05.gif sat06.gif\
+         sat07.gif sat08.gif sat09.gif sat10.gif\
+	 sat11.gif sat12.gif sat13.gif sat14.gif\
+	 sat15.gif sat16.gif sat17.gif\
+-time 300 sat18.gif
+exit

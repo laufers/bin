@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo 'Updating brew...'
+brew update 
+brew upgrade 
+brew cleanup --all -y
+echo 'Brew update complete.'
+echo ''
+echo ''
+
+echo 'Updating Anaconda...'
+conda upgrade --all -y
+conda clean --all -y
+echo 'Anaconda update done.'

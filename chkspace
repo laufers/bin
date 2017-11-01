@@ -1,0 +1,26 @@
+#!/bin/csh
+##########################################################################
+# Program:    chkspace
+# Purpose:    script to sort totals base on du -sk
+# Version:    0.0.1
+# Created:    07 NOV 2000
+#
+# Author:     Mark Laufersweiler
+# Email:      laufers@ou.edu
+#
+# Modified:   
+#			
+##########################################################################
+cd /$1
+set dirs=`ls | grep -v 00 |grep -v SUN`
+echo ""
+echo "$1"
+echo ""
+#echo $dirs
+foreach name ($dirs)
+  /usr/bin/du -sk $name >> /tmp/totals.out
+end
+rm 00disk_usage
+cat /tmp/totals.out | sort -rn > 00disk_usage
+/usr/bin/rm /tmp/totals.out
+/usr/local/bin/less 00disk_usage

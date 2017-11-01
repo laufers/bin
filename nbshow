@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Call jupyter to convert notebook ipynb to html
+/Users/laufers/anaconda3/bin/jupyter nbconvert $1
+
+name=`echo $1 | cut -d'.' -f1`
+open $name'.html'
+sleep 5
+rm $name'.html'
