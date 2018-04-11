@@ -20,3 +20,5 @@ A collection of scripts and tools to make my life a bit easier across my *nix ac
   * soft link to local Sublime edit for MacOS 
 * **sw_update**
   * script to update homebrew and anaconda
+* **ever2mail.script**
+  * apple script to copy mail and enter into Evernote
