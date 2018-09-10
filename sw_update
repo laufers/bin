@@ -5,7 +5,7 @@ clear
 echo 'Updating brew...'
 brew update 
 brew upgrade 
-brew cleanup -y
+brew cleanup
 echo 'Brew update complete.'
 echo ''
 echo ''
